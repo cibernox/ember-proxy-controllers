@@ -22,5 +22,4 @@ const { ObjectProxy, ControllerMixin } = Ember;
   @deprecated
   @public
 **/
-export default ObjectProxy.extend(ControllerMixin, {
-});
+export default ObjectProxy.extend(ControllerMixin);

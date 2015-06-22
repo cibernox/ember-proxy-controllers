@@ -1,5 +1,5 @@
-import ObjectController from './object_controller';
-import ArrayController from './array_controller';
+import ObjectController from './object';
+import ArrayController from './array';
 
 export {
   ObjectController,
