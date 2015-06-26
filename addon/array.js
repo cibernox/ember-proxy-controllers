@@ -5,10 +5,10 @@
 
 import Ember from 'ember';
 import replace from './utils/replace';
+import SortableMixin from './utils/sortable-mixin';
 
 const {
   ArrayProxy,
-  SortableMixin,
   ControllerMixin,
   Error: EmberError,
   Array: EmberArray,
