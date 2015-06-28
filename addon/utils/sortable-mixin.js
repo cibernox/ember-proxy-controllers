@@ -8,7 +8,7 @@ const {
   removeObserver,
   computed,
   Mixin,
-  _privateBeforeObserver,
+  beforeObserver,
   observer
 } = Ember;
 
@@ -182,7 +182,7 @@ export default Mixin.create(MutableEnumerable, {
     }
   }),
 
-  _contentWillChange: _privateBeforeObserver('content', function() {
+  _contentWillChange: beforeObserver('content', function() {
     var content = get(this, 'content');
     var sortProperties = get(this, 'sortProperties');
 
@@ -197,7 +197,7 @@ export default Mixin.create(MutableEnumerable, {
     this._super(...arguments);
   }),
 
-  sortPropertiesWillChange: _privateBeforeObserver('sortProperties', function() {
+  sortPropertiesWillChange: beforeObserver('sortProperties', function() {
     this._lastSortAscending = undefined;
   }),
 
@@ -205,7 +205,7 @@ export default Mixin.create(MutableEnumerable, {
     this._lastSortAscending = undefined;
   }),
 
-  sortAscendingWillChange: _privateBeforeObserver('sortAscending', function() {
+  sortAscendingWillChange: beforeObserver('sortAscending', function() {
     this._lastSortAscending = get(this, 'sortAscending');
   }),
 
