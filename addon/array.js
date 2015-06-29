@@ -105,6 +105,10 @@ const {
 */
 
 export default ArrayProxy.extend(ControllerMixin, SortableMixin, {
+  /*
+    Duck typing to support this legacy controllers from the each helper in Ember's view layer
+  */
+  _isArrayController: true,
 
   /**
     A string containing the controller name used to wrap items.
